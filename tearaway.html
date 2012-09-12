@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Tearaway</title>
+	<script type="text/javascript" src="http://cdn.flashtalking.com/frameworks/js/api/2/1/html5API.js"></script>
+	<script type="text/javascript" src="http://cdn.flashtalking.com/frameworks/js/api/2/1/instantAds.js"></script>
+	<script type="text/javascript" src="http://cdn.flashtalking.com/frameworks/js/jquery/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="http://cdn.flashtalking.com/frameworks/js/jquery/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="scripts/tearaway.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/tearaway.css" />
+</head>
+
+<body>
+	
+<div class="tear_main">
+	
+	<div class="sponsored">Sponsored content</div>
+	
+	<div class="merch" rel="nofollow" target="_blank"><img id="slideMerchImg"/></div>
+	
+	<div id="leftSlide" class="leftSlide"></div>	
+	<div id="rightSlide" class="rightSlide"></div>
+	
+	<div id="idx0" class="index ind0"></div>
+	<div id="idx1" class="index ind1"></div>
+	<div id="idx2" class="index ind2"></div>
+	
+	<div class="slide_window">
+		
+		<div id="slidesDiv" class="slide_content">
+			
+			<div class="slide1">
+				
+				<div class="slide_img" rel="nofollow" target="_blank"><img id="slideImg1"/></div>
+				
+				<div id="slideHeader1" class="slide_header" rel="nofollow" target="_blank"></div>
+				
+				<div id="slideText1" class="slide_text"></div>
+				
+				<div id="slideCheck1" class="slide_check" rel="nofollow" target="_blank"></div>
+			
+			</div>
+			
+			<div class="slide2">
+				
+				<div class="slide_img" rel="nofollow" target="_blank"><img id="slideImg2"/></div>
+				
+				<div id="slideHeader2" class="slide_header" rel="nofollow" target="_blank"></div>
+				
+				<div id="slideText2" class="slide_text"></div>
+				
+				<div id="slideCheck2" class="slide_check" rel="nofollow" target="_blank"></div>
+			
+			</div>
+			
+			<div class="slide3">
+				
+				<div class="slide_img" rel="nofollow" target="_blank"><img id="slideImg3"/></div> 
+				
+				<div id="slideHeader3" class="slide_header" rel="nofollow" target="_blank"></div>
+				
+				<div id="slideText3" class="slide_text"></div>
+				
+				<div id="slideCheck3" class="slide_check" rel="nofollow" target="_blank"></div>
+			
+			</div>
+			
+		</div>
+
+	</div>
+</div>
+
+<script>
+	var myFT = new FT,
+	merchImg = FT.query("#slideMerchImg"),
+	img1 = FT.query("#slideImg1"),
+	header1 = FT.query("#slideHeader1"),
+	text1 = FT.query("#slideText1"),
+	check1 = FT.query("#slideCheck1"),
+	img2 = FT.query("#slideImg2"),
+	header2 = FT.query("#slideHeader2"),
+	text2 = FT.query("#slideText2"),
+	check2 = FT.query("#slideCheck2"),
+	img3 = FT.query("#slideImg3"),
+	header3 = FT.query("#slideHeader3"),
+	text3 = FT.query("#slideText3"),
+	check3 = FT.query("#slideCheck3");
+
+	myFT.applyClickTag(merchImg, 1);
+	myFT.applyClickTag(img1, 2);
+	myFT.applyClickTag(header1, 3);
+	myFT.applyClickTag(check1, 4);
+	myFT.applyClickTag(img2, 5);
+	myFT.applyClickTag(header2, 6);
+	myFT.applyClickTag(check2, 7);
+	myFT.applyClickTag(img3, 8);
+	myFT.applyClickTag(header3, 9);
+	myFT.applyClickTag(check3, 10);
+	myFT.addEventListener("instantads", function(){
+		merchImg.src = myFT.instantAds.instantImageLogo;
+		img1.src = myFT.instantAds.instantImage1;
+		header1.innerHTML = myFT.instantAds.dynamicHeader1;
+		text1.innerHTML = myFT.instantAds.dynamicText1;
+		check1.innerHTML = myFT.instantAds.dynamicCheck1;
+		img2.src = myFT.instantAds.instantImage2;
+		header2.innerHTML = myFT.instantAds.dynamicHeader2;
+		text2.innerHTML = myFT.instantAds.dynamicText2;
+		check2.innerHTML = myFT.instantAds.dynamicCheck2;
+		img3.src = myFT.instantAds.instantImage3;
+		header3.innerHTML = myFT.instantAds.dynamicHeader3;
+		text3.innerHTML = myFT.instantAds.dynamicText3;
+		check3.innerHTML = myFT.instantAds.dynamicCheck3;
+	});
+</script>
+
+</body>
+</html>

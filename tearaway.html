@@ -73,20 +73,31 @@
 
 <script>
 	var myFT = new FT,
-	merchImg = FT.query("#slideMerchImg"),
-	img1 = FT.query("#slideImg1"),
-	header1 = FT.query("#slideHeader1"),
-	text1 = FT.query("#slideText1"),
-	check1 = FT.query("#slideCheck1"),
-	img2 = FT.query("#slideImg2"),
-	header2 = FT.query("#slideHeader2"),
-	text2 = FT.query("#slideText2"),
-	check2 = FT.query("#slideCheck2"),
-	img3 = FT.query("#slideImg3"),
-	header3 = FT.query("#slideHeader3"),
-	text3 = FT.query("#slideText3"),
-	check3 = FT.query("#slideCheck3");
-
+		merchImg = FT.query("#slideMerchImg"),
+		img1 = FT.query("#slideImg1"),
+		header1 = FT.query("#slideHeader1"),
+		text1 = FT.query("#slideText1"),
+		check1 = FT.query("#slideCheck1"),
+		img2 = FT.query("#slideImg2"),
+		header2 = FT.query("#slideHeader2"),
+		text2 = FT.query("#slideText2"),
+		check2 = FT.query("#slideCheck2"),
+		img3 = FT.query("#slideImg3"),
+		header3 = FT.query("#slideHeader3"),
+		text3 = FT.query("#slideText3"),
+		check3 = FT.query("#slideCheck3"),
+		clickLeft = FT.query("#leftSlide"),
+		clickRight = FT.query("#rightSlide"),
+		navLeft = FT.query("#idx0"),
+		navMiddle = FT.query("#idx1"),
+		navRight = FT.query("#idx2");
+	
+	clickLeft.addEventListener("click", function(){myFT.tracker("arrowLeft", null, "arrowLeft")}, false); 
+	clickRight.addEventListener("click", function(){myFT.tracker("arrowRight", null, "arrowRight")}, false); 
+	navLeft.addEventListener("click", function(){myFT.tracker("navLeft", null, "navLeft")}, false); 
+	navMiddle.addEventListener("click", function(){myFT.tracker("navMiddle", null, "navMiddle")}, false); 
+	navRight.addEventListener("click", function(){myFT.tracker("navRight", null, "navRight")}, false); 
+	
 	myFT.applyClickTag(merchImg, 1);
 	myFT.applyClickTag(img1, 2);
 	myFT.applyClickTag(header1, 3);
@@ -100,17 +111,17 @@
 	myFT.addEventListener("instantads", function(){
 		merchImg.src = myFT.instantAds.instantImageLogo;
 		img1.src = myFT.instantAds.instantImage1;
-		header1.innerHTML = myFT.instantAds.dynamicHeader1;
-		text1.innerHTML = myFT.instantAds.dynamicText1;
-		check1.innerHTML = myFT.instantAds.dynamicCheck1;
+		header1.innerHTML = myFT.instantAds.dynamicHeader1.substring(0,64);
+		text1.innerHTML = myFT.instantAds.dynamicText1.substring(0,350);
+		check1.innerHTML = myFT.instantAds.dynamicCheck1.substring(0,25);
 		img2.src = myFT.instantAds.instantImage2;
-		header2.innerHTML = myFT.instantAds.dynamicHeader2;
-		text2.innerHTML = myFT.instantAds.dynamicText2;
-		check2.innerHTML = myFT.instantAds.dynamicCheck2;
+		header2.innerHTML = myFT.instantAds.dynamicHeader2.substring(0,64);
+		text2.innerHTML = myFT.instantAds.dynamicText2.substring(0,350);
+		check2.innerHTML = myFT.instantAds.dynamicCheck2.substring(0,25);
 		img3.src = myFT.instantAds.instantImage3;
-		header3.innerHTML = myFT.instantAds.dynamicHeader3;
-		text3.innerHTML = myFT.instantAds.dynamicText3;
-		check3.innerHTML = myFT.instantAds.dynamicCheck3;
+		header3.innerHTML = myFT.instantAds.dynamicHeader3.substring(0,64);
+		text3.innerHTML = myFT.instantAds.dynamicText3.substring(0,350);
+		check3.innerHTML = myFT.instantAds.dynamicCheck3.substring(0,25);
 	});
 </script>
 

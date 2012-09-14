@@ -17,5 +17,12 @@ FT.manifest({
 		{"name":"dynamicHeader3","type":"text","default":"Share Shot"},
 		{"name":"dynamicText3", "type":"text", "default":"Share photos to a group gallery using the Share Shot camera mode. Anyone in the group can add to the gallery, and even if you didn't take any photos, you can still leave with the group's created gallery."},
 		{"name":"dynamicCheck3", "type":"text", "default":"Check It Out"}
-	]
+	],
+	"trackingEvents":[
+		{"name":"arrowLeft", "type":"string"},
+		{"name":"arrowRight", "type":"string"},
+		{"name":"navLeft", "type":"string"},
+		{"name":"navMiddle", "type":"string"},
+		{"name":"navRight", "type":"string"}
+	 ]
 });
